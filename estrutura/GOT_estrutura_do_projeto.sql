@@ -5,7 +5,7 @@ CREATE TABLE `personagens` (
   `aparicoes` smallint DEFAULT NULL,
   `primeira_aparicao` smallint DEFAULT NULL,
   `ultima_aparicao` smallint DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`));
 
 CREATE TABLE `episodios` (
   `id` tinyint NOT NULL AUTO_INCREMENT,
@@ -15,7 +15,7 @@ CREATE TABLE `episodios` (
   `lancamento` varchar(10) DEFAULT NULL,
   `pontuacao` float DEFAULT NULL,
   `votos` int DEFAULT NULL,
-  `sinopse` text,
+  `sinopse` varchar(250),
   `escritor1` varchar(25) DEFAULT NULL,
   `escritor2` varchar(25) DEFAULT NULL,
   `estrela1` varchar(25) DEFAULT NULL,
@@ -27,13 +27,10 @@ CREATE TABLE `episodios` (
   `duracao` tinyint DEFAULT NULL,
   `diretor` varchar(25) DEFAULT NULL,
   `orcamento` smallint DEFAULT NULL,
-  PRIMARY KEY (`id`),
+  PRIMARY KEY (`id`));
 
-CREATE TABLE `personagens` (
-  `id` smallint NOT NULL AUTO_INCREMENT,
-  `nome` varchar(50) ,
-  `ator_atriz` varchar(50) ,
-  `aparicoes` smallint ,
-  `primeira_aparicao` smallint ,
-  `ultima_aparicao` smallint ,
-  PRIMARY KEY (`id`);
+CREATE TABLE `casas` (
+  `id` tinyint NOT NULL AUTO_INCREMENT,
+  `nome` varchar(40),
+  `regiao` varchar(45)
+  PRIMARY KEY (`id`));
